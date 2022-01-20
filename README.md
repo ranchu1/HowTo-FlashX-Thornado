@@ -72,7 +72,35 @@ This repository is created for how to run Thornado from Flash-X and view the res
 
    ###### Test 2: relaxation test (on hold on Flash-X)
 
+   Assume you made test 1 and know how to run a test.
+
+   - To run this test, you need to have weaklib table be ready.
+
+   Tables can be downloaded from https://code.ornl.gov/astro/weaklib-tables.
+   Go to `weaklib-tables/SFHo/LowRes` and download `wl-EOS-SFHo-15-25-50.h5`, `wl-Op-SFHo-15-25-50-E40-B85-AbEm.h5`, and `wl-Op-SFHo-15-25-50-E40-B85-Iso.h5`.
+   You can also do this by git clone the whole repo (git clone git@code.ornl.gov:astro/weaklib-tables.git) but it will take more memory space.
+
+   - Set up the object directory.
+
+   Like other tests, the default setting up syntax is in `README` under that test setting directory: `source/Simulation/SimulationMain/Relaxation/README`.
+   This time, we use the "standard" way to set up the object directory:
+      1. copy line `./setup Relaxation -auto ...` , and
+      2. run the commend under home directory `$Flash-X/' (past and enter).
+
+   Because `-objdir=relax_MI_5E_O1_1Sph`, the directory for this time is `relax_MI_5E_O1_1Sph`.
+
+   - Compile the executable and run.
+   Same commands and filename as in test 1.
+
    ###### Test 3: deleptonization test
+
+   Assume you made test 2 and have the tables.
+
+   Setup syntax is in `source/Simulation/SimulationMain/DeleptonizationWave/README`.
+   The efforts needed to set up this test is as same as that fot test 2, but more physics module and submodule (weaklib, to be specific) are integrated.
+   If you can run the default setting sucessfully, congratuation, you are ready to run a 1D gravitational collapse!
+   The only thing you will need to do is editting parameter file, flash.par, as needed. Or, some parameters in the compiler flag.
+
 
 ##### 7, Check the result
 
