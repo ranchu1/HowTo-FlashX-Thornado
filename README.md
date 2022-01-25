@@ -113,5 +113,9 @@ This repository is created for how to run Thornado from Flash-X and view the res
        2. MATLAB: [matlabScripts](matlabScripts)
        3. Jupyter notebook: [jupyterScripts](jupyterScripts)
 
+## Other useful materials
+
+- FLASH User's Guide: https://usermanual.wiki/Document/FLASHmanual.1352128691/help
+
 ### Ask For Help
 - R. Chu : rchu@vols.utk.edu
