@@ -3,11 +3,11 @@ This repository is created for how to run Thornado from Flash-X and view the res
 
 ##  Step by Step Setting up for Flash-X+Thornado
 
-##### 1. Check out Flash-X:
+#### 1. Check out Flash-X:
 
 	$git clone git@github.com:Flash-X/Flash-X.git
 
-##### 2. Check out submodules
+#### 2. Check out submodules
 
 	$cd Flash-X
 	$git submodule update --init
@@ -21,7 +21,7 @@ This repository is created for how to run Thornado from Flash-X and view the res
    Sometimes you will need to switch to a special feature branch, or check out the latest master branch for the submodules.
    If so, do step 3. If not, go to step 4.
 
-##### 3, (optional) Checkout a special branch/version of submodule
+#### 3, (optional) Checkout a special branch/version of submodule
 
    For example, if you want to checkout the latest thornado master branch, or other feature branch
 
@@ -30,17 +30,22 @@ This repository is created for how to run Thornado from Flash-X and view the res
 	$git pull
 	$cd ../../..
 
-##### 4, (optional) If you need to switch Flash-X to desired branch
+#### 4, (optional) If you need to switch Flash-X to desired branch
 
 	$git checkout [feature_branch_name]
 
-##### 5, Check if you have the right makefile for your machine: `Flash-X/sites/YourMachineName/Makefile.h`
+#### 5, Check if you have the right makefile for your machine: `Flash-X/sites/YourMachineName/Makefile.h`
    You can copy other's makefile as a template and make changes for your machine as needed.
    For example, Summit has its makefiles under `sites/summit.olcf.ornl.gov`.
 
-##### 6, Set up your object directory using the default setting up syntax and compile the executable
+#### 6, Set up your object directory using the default setting up syntax and compile the executable
 
-   ###### Test 1: streaming Doppler shift
+   Note: these tests are available on FLASH5/relaxationTest branch.
+
+	$git checkout relaxationTest
+
+
+   ##### Test 1: streaming Doppler shift
    Let's start with something simple, streaming doppler shift test.
    You can use the default setting up syntax by
 
@@ -70,7 +75,7 @@ This repository is created for how to run Thornado from Flash-X and view the res
    A log file `*.log` is also generated.
    If not interruption occurs, the program will run until it hits the walltime, max time (`tmax` in unit of s), or max iteration (`nend`).
 
-   ###### Test 2: relaxation test (on hold on Flash-X)
+   ##### Test 2: relaxation test (on hold on Flash-X)
 
    Assume you made test 1 and know how to run a test.
 
@@ -92,7 +97,7 @@ This repository is created for how to run Thornado from Flash-X and view the res
    - Compile the executable and run.
    Same commands and filename as in test 1.
 
-   ###### Test 3: deleptonization test
+   ##### Test 3: deleptonization test
 
    Assume you made test 2 and have the tables.
 
@@ -111,7 +116,7 @@ This repository is created for how to run Thornado from Flash-X and view the res
 
        1. VisIt: https://wci.llnl.gov/simulation/computer-codes/visit
        2. MATLAB: [matlabScripts](matlabScripts)
-       3. Jupyter notebook: [jupyterScripts](jupyterScripts)
+       3. Jupyter notebook: [jupyterScripts](https://github.com/ranchu1/Analysis_FLASH)
 
 ## Other useful materials
 
